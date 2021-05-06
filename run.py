@@ -5,7 +5,7 @@ import subprocess
 import urllib.request
 
 card = requests.get(
-    'https://api.scryfall.com/cards/named?fuzzy=wurmcoil').json()
+    'https://api.scryfall.com/cards/named?fuzzy=Wasitora').json()
 print("Ok")
 for token in [card_part for card_part in card['all_parts'] if card_part['component'] == 'token']:
     token_image = requests.get(token['uri']).json()[
