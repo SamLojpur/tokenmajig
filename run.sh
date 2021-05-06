@@ -1,0 +1,2 @@
+curl https://api.scryfall.com/cards/named\?fuzzy\=outlaws+merriment | \
+    python3 -c "import sys, json; token = [x for x in json.load(sys.stdin)['all_parts'] if x['component'] == 'token']; print(token)"
